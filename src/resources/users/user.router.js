@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const User = require('./user.model');
 const usersService = require('./user.service');
+const tasksService = require('../tasks/task.service');
 const userSchema = require('./user.schema');
 const {
   validateSchema,
@@ -37,6 +38,7 @@ router
 
   .delete(async (req, res) => {
     const { id } = req.params;
+    await tasksService.unassignUser(id);
     await usersService.remove(id);
     res.status(200).json({ status: 'ok' });
   });

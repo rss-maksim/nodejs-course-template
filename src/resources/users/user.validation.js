@@ -1,9 +1,5 @@
 const usersService = require('./user.service');
-
-const options = {
-  abortEarly: false,
-  allowUnknown: false
-};
+const { options } = require('../../common/schemaConfig');
 
 function errorResponse(schemaErrors) {
   const errors = schemaErrors.map(error => {
