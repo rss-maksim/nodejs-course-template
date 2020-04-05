@@ -37,10 +37,11 @@ const removeByBoardId = async boardId => {
   tasks = tasks.filter(task => task.boardId !== boardId);
 };
 
-const unassignUser = userId =>
-  tasks.map(task =>
+const unassignUser = async userId => {
+  tasks = tasks.map(task =>
     task.userId === userId ? { ...task, userId: null } : task
   );
+};
 
 module.exports = {
   getAll,

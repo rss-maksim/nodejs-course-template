@@ -13,7 +13,7 @@ const remove = id => tasksRepo.remove(id);
 
 const removeByBoardId = boardId => tasksRepo.removeByBoardId(boardId);
 
-const unassignUser = userId => tasksRepo.removeByBoardId(userId);
+const unassignUser = userId => tasksRepo.unassignUser(userId);
 
 module.exports = {
   getAll,

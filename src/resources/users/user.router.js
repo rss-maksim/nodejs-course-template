@@ -3,11 +3,7 @@ const User = require('./user.model');
 const usersService = require('./user.service');
 const tasksService = require('../tasks/task.service');
 const userSchema = require('./user.schema');
-const {
-  validateSchema,
-  validateExistence,
-  validateUnique
-} = require('./user.validation');
+const { validateSchema, validateExistence } = require('./user.validation');
 
 router
   .route('/')
@@ -17,7 +13,7 @@ router
     res.json(users.map(User.toResponse));
   })
 
-  .post(validateSchema(userSchema), validateUnique, async (req, res) => {
+  .post(validateSchema(userSchema), async (req, res) => {
     const user = await usersService.create(req.body);
     res.json(User.toResponse(user));
   });

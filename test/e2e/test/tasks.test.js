@@ -59,7 +59,6 @@ describe('Tasks suite', () => {
         .expect(200)
         .expect('Content-Type', /json/)
         .then(res => {
-          console.log('!!!', res.body);
           debug(res.body);
           expect(res.body).to.be.an('array');
           jestExpect(res.body).not.toHaveLength(0);
