@@ -1,3 +1,4 @@
+const HttpStatus = require('http-status-codes');
 const router = require('express').Router({ mergeParams: true });
 const Task = require('./task.model');
 const tasksService = require('./task.service');
@@ -9,42 +10,72 @@ router
   .route('/:boardId/tasks')
 
   .get(async (req, res) => {
-    const { boardId } = req.params;
-    const board = await boardsService.getOne(boardId);
-    if (!board) {
-      return res.status(404).json({ status: 'error', message: 'Not found' });
+    try {
+      const { boardId } = req.params;
+      const board = await boardsService.getOne(boardId);
+      if (!board) {
+        return res.status(404).json({ status: 'error', message: 'Not found' });
+      }
+      const tasks = await tasksService.getAll(boardId);
+      res.json(tasks.map(Task.toResponse));
+    } catch (error) {
+      res
+        .status(HttpStatus.INTERNAL_SERVER_ERROR)
+        .json({ error: 'Internal Server Error', description: error.message });
     }
-    const tasks = await tasksService.getAll(boardId);
-    res.json(tasks.map(Task.toResponse));
   })
 
   .post(validateSchema(tasksSchema), async (req, res) => {
-    const { boardId } = req.params;
-    const task = await tasksService.create({ ...req.body, boardId });
-    res.json(Task.toResponse(task));
+    try {
+      const { boardId } = req.params;
+      const task = await tasksService.create({ ...req.body, boardId });
+      res.json(Task.toResponse(task));
+    } catch (error) {
+      res
+        .status(HttpStatus.INTERNAL_SERVER_ERROR)
+        .json({ error: 'Internal Server Error', description: error.message });
+    }
   });
 
 router
   .route('/:boardId/tasks/:taskId')
   .get(async (req, res) => {
-    const { taskId } = req.params;
-    const task = await tasksService.getOne(taskId);
-    if (!task) {
-      return res.status(404).json({ status: 'error', message: 'Not found' });
+    try {
+      const { taskId } = req.params;
+      const task = await tasksService.getOne(taskId);
+      if (!task) {
+        return res.status(404).json({ status: 'error', message: 'Not found' });
+      }
+      res.json(Task.toResponse(task));
+    } catch (error) {
+      res
+        .status(HttpStatus.INTERNAL_SERVER_ERROR)
+        .json({ error: 'Internal Server Error', description: error.message });
     }
-    res.json(Task.toResponse(task));
   })
 
   .put(validateSchema(tasksSchema), async (req, res) => {
-    const { taskId } = req.params;
-    const task = await tasksService.update(req.body, taskId);
-    return res.json(Task.toResponse(task));
+    try {
+      const { taskId } = req.params;
+      const task = await tasksService.update(req.body, taskId);
+      res.json(Task.toResponse(task));
+    } catch (error) {
+      res
+        .status(HttpStatus.INTERNAL_SERVER_ERROR)
+        .json({ error: 'Internal Server Error', description: error.message });
+    }
   })
 
   .delete(async (req, res) => {
-    const { taskId } = req.params;
-    await tasksService.remove(taskId);
-    res.status(200).json({ status: 'ok' });
+    try {
+      const { taskId } = req.params;
+      await tasksService.remove(taskId);
+      res.status(200).json({ status: 'ok' });
+    } catch (error) {
+      res
+        .status(HttpStatus.INTERNAL_SERVER_ERROR)
+        .json({ error: 'Internal Server Error', description: error.message });
+    }
   });
 
 module.exports = router;
