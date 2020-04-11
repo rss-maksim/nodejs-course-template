@@ -1,4 +1,3 @@
-const HttpStatus = require('http-status-codes');
 const router = require('express').Router({ mergeParams: true });
 const Board = require('./board.model');
 const boardsService = require('./board.service');
@@ -10,31 +9,27 @@ const { validateSchema } = require('./board.validation');
 router
   .route('/')
 
-  .get(async (req, res) => {
+  .get(async (req, res, next) => {
     try {
       const boards = await boardsService.getAll();
       res.json(boards.map(Board.toResponse));
     } catch (error) {
-      res
-        .status(HttpStatus.INTERNAL_SERVER_ERROR)
-        .json({ error: 'Internal Server Error', description: error.message });
+      return next(error);
     }
   })
 
-  .post(validateSchema(boardSchema), async (req, res) => {
+  .post(validateSchema(boardSchema), async (req, res, next) => {
     try {
       const board = await boardsService.create(req.body);
       res.json(Board.toResponse(board));
     } catch (error) {
-      res
-        .status(HttpStatus.INTERNAL_SERVER_ERROR)
-        .json({ error: 'Internal Server Error', description: error.message });
+      return next(error);
     }
   });
 
 router
   .route('/:boardId')
-  .get(async (req, res) => {
+  .get(async (req, res, next) => {
     try {
       const { boardId } = req.params;
       const board = await boardsService.getOne(boardId);
@@ -43,34 +38,28 @@ router
       }
       res.json(Board.toResponse(board));
     } catch (error) {
-      res
-        .status(HttpStatus.INTERNAL_SERVER_ERROR)
-        .json({ error: 'Internal Server Error', description: error.message });
+      return next(error);
     }
   })
 
-  .put(validateSchema(boardSchema), async (req, res) => {
+  .put(validateSchema(boardSchema), async (req, res, next) => {
     try {
       const { boardId } = req.params;
       const board = await boardsService.update(req.body, boardId);
       res.json(Board.toResponse(board));
     } catch (error) {
-      res
-        .status(HttpStatus.INTERNAL_SERVER_ERROR)
-        .json({ error: 'Internal Server Error', description: error.message });
+      return next(error);
     }
   })
 
-  .delete(async (req, res) => {
+  .delete(async (req, res, next) => {
     try {
       const { boardId } = req.params;
       await tasksService.removeByBoardId(boardId);
       await boardsService.remove(boardId);
       res.json({ status: 'OK' });
     } catch (error) {
-      res
-        .status(HttpStatus.INTERNAL_SERVER_ERROR)
-        .json({ error: 'Internal Server Error', description: error.message });
+      return next(error);
     }
   });
 

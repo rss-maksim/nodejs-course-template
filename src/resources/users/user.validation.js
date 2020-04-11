@@ -1,22 +1,23 @@
 const usersService = require('./user.service');
 const { options } = require('../../common/schemaConfig');
+const { NotFoundError, ValidationError } = require('../../common/errors');
 
-function errorResponse(schemaErrors) {
-  const errors = schemaErrors.map(error => {
-    const { path, message } = error;
-    return { path, message };
-  });
-  return {
-    status: 'error',
-    errors
-  };
-}
+// function errorResponse(schemaErrors) {
+//   const errors = schemaErrors.map(error => {
+//     const { path, message } = error;
+//     return { path, message };
+//   });
+//   return {
+//     status: 'error',
+//     errors
+//   };
+// }
 
 function validateSchema(schema) {
   return (req, res, next) => {
     const { error } = schema.validate(req.body, options);
     if (error && error.isJoi) {
-      return res.status(400).json(errorResponse(error.details));
+      throw new ValidationError(error.details);
     }
     next();
   };
@@ -36,7 +37,7 @@ async function validateExistence(req, res, next) {
   const { id } = req.params;
   const user = await usersService.getOne(id);
   if (!user) {
-    return res.status(404).json({ status: 'error', message: 'Not found' });
+    throw new NotFoundError('Not found');
   }
   next();
 }
