@@ -35,7 +35,8 @@ app.use('/users', userRouter);
 app.use('/boards', boardRouter);
 app.use('/boards', taskRouter);
 
-app.use(handleError).use(handleInternalServerError);
+app.use(handleError);
+app.use(handleInternalServerError);
 
 process.on('unhandledRejection', reason => {
   errorLogger.error({

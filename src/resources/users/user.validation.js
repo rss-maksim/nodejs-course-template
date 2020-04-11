@@ -35,11 +35,15 @@ async function validateUnique(req, res, next) {
 
 async function validateExistence(req, res, next) {
   const { id } = req.params;
-  const user = await usersService.getOne(id);
-  if (!user) {
-    throw new NotFoundError('Not found');
+  try {
+    const user = await usersService.getOne(id);
+    if (!user) {
+      throw new NotFoundError('Not found');
+    }
+    return next();
+  } catch (err) {
+    return next(err);
   }
-  next();
 }
 
 module.exports = { validateSchema, validateExistence, validateUnique };

@@ -14,8 +14,7 @@ const handleError = (err, req, res, next) => {
   }
   if (err instanceof NotFoundError) {
     const { status, statusCode, message } = err;
-    console.log('handleError NotFoundError', { status, statusCode, message });
-    errorLogger.error({ label: 'Not Found', statusCode, text: message });
+    errorLogger.error({ label: 'Not Found', statusCode });
     res.status(statusCode).json({ status, statusCode, message });
     return;
   }

@@ -614,3 +614,165 @@
 [info]: [2020-04-11T19:22:11.758Z] GET /boards/c7372d5d-bd08-4fbf-9b94-2d1487f5a1a5/tasks/e78cd36a-ec9d-46a6-a61f-2f0be3450a00 200
 [info]: [2020-04-11T19:22:11.758Z] GET /boards/c7372d5d-bd08-4fbf-9b94-2d1487f5a1a5/tasks/cd85a0bb-7412-45d7-993a-668c78f3824e 200
 [info]: [2020-04-11T19:22:11.760Z] GET /boards/c7372d5d-bd08-4fbf-9b94-2d1487f5a1a5/tasks/db5a2c1d-d272-483f-a082-d05cdb2094f0 200
+[info]: [2020-04-11T19:24:56.547Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T19:24:56.561Z] POST /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks 200 **body: {"title":"Autotest task","order":0,"description":"Lorem ipsum","userId":null,"boardId":null,"columnId":null}
+[info]: [2020-04-11T19:24:56.565Z] GET /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks 200
+[info]: [2020-04-11T19:24:56.575Z] GET /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks 200
+[info]: [2020-04-11T19:24:56.579Z] GET /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks/15338f63-680b-40f9-b2bc-6cc003b5164d 200
+[info]: [2020-04-11T19:24:56.585Z] POST /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks 200 **body: {"title":"Autotest task","order":0,"description":"Lorem ipsum","userId":null,"boardId":null,"columnId":null}
+[info]: [2020-04-11T19:24:56.595Z] DELETE /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks/0482b654-b11d-444c-a8b0-86b4b647c554 200
+[info]: [2020-04-11T19:24:56.599Z] POST /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks 200 **body: {"title":"Autotest task","order":0,"description":"Lorem ipsum","userId":null,"boardId":null,"columnId":null}
+[info]: [2020-04-11T19:24:56.609Z] PUT /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks/33345539-1d3b-4602-80ef-470179896556 200 **body: {"id":"33345539-1d3b-4602-80ef-470179896556","title":"Autotest updated task","order":0,"description":"Lorem ipsum","userId":null,"boardId":"88cebda7-b312-49a1-bd34-e0cccb8b6204","columnId":null}
+[info]: [2020-04-11T19:24:56.612Z] GET /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks/33345539-1d3b-4602-80ef-470179896556 200
+[info]: [2020-04-11T19:24:56.614Z] GET /users 200
+[info]: [2020-04-11T19:24:56.615Z] GET /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks/15338f63-680b-40f9-b2bc-6cc003b5164d 200
+[info]: [2020-04-11T19:24:56.617Z] DELETE /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204/tasks/15338f63-680b-40f9-b2bc-6cc003b5164d 200
+[info]: [2020-04-11T19:24:56.621Z] GET /boards/15338f63-680b-40f9-b2bc-6cc003b5164d/tasks/undefined 200
+[info]: [2020-04-11T19:24:56.625Z] DELETE /boards/88cebda7-b312-49a1-bd34-e0cccb8b6204 200
+[info]: [2020-04-11T19:24:56.647Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T19:24:56.649Z] GET /users 200
+[info]: [2020-04-11T19:24:56.653Z] GET /users/e6054355-d5d2-4f23-a010-9e49f1dd047f 200
+[info]: [2020-04-11T19:24:56.661Z] DELETE /users/e6054355-d5d2-4f23-a010-9e49f1dd047f 200
+[info]: [2020-04-11T19:24:56.668Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T19:24:56.678Z] DELETE /users/6632617a-fbc1-4ba7-a2fa-dff0f9ff5f0c 200
+[info]: [2020-04-11T19:24:56.682Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T19:24:56.692Z] PUT /users/a9fb836f-1ac5-419d-9f4f-beaa54b6c7b3 200 **body: {"name":"Autotest updated TEST_USER","login":"test_user","password":"T35t_P@55w0rd","id":"a9fb836f-1ac5-419d-9f4f-beaa54b6c7b3"}
+[info]: [2020-04-11T19:24:56.709Z] GET /users/a9fb836f-1ac5-419d-9f4f-beaa54b6c7b3 200
+[info]: [2020-04-11T19:24:56.713Z] DELETE /users/a9fb836f-1ac5-419d-9f4f-beaa54b6c7b3 200
+[info]: [2020-04-11T19:24:56.724Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T19:24:56.726Z] DELETE /users/e23c0a30-eacc-46ae-b7e7-64c152bb60ed 200
+[info]: [2020-04-11T19:24:56.729Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T19:24:56.732Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T19:24:56.735Z] POST /boards/aada048f-8476-4caa-9658-25c54fbe3e08/tasks 200 **body: {"title":"Task #1","order":1,"description":"Lorem ipsum","userId":"4c2960d5-f889-429e-a7b5-53905171e23f","boardId":"aada048f-8476-4caa-9658-25c54fbe3e08"}
+[info]: [2020-04-11T19:24:56.737Z] POST /boards/aada048f-8476-4caa-9658-25c54fbe3e08/tasks 200 **body: {"title":"Task #2","order":2,"description":"Lorem ipsum","userId":"4c2960d5-f889-429e-a7b5-53905171e23f","boardId":"aada048f-8476-4caa-9658-25c54fbe3e08"}
+[info]: [2020-04-11T19:24:56.740Z] DELETE /users/4c2960d5-f889-429e-a7b5-53905171e23f 200
+[info]: [2020-04-11T19:24:56.742Z] GET /boards/aada048f-8476-4caa-9658-25c54fbe3e08/tasks/19f44c9f-fd29-4562-bfe1-d00cc70021fb 200
+[info]: [2020-04-11T19:24:56.744Z] GET /boards/aada048f-8476-4caa-9658-25c54fbe3e08/tasks/83d9a084-5286-4024-8b68-a90234000d6b 200
+[info]: [2020-04-11T19:24:56.748Z] DELETE /boards/aada048f-8476-4caa-9658-25c54fbe3e08/tasks/19f44c9f-fd29-4562-bfe1-d00cc70021fb 200
+[info]: [2020-04-11T19:24:56.749Z] DELETE /boards/aada048f-8476-4caa-9658-25c54fbe3e08/tasks/83d9a084-5286-4024-8b68-a90234000d6b 200
+[info]: [2020-04-11T19:24:56.756Z] DELETE /boards/aada048f-8476-4caa-9658-25c54fbe3e08 200
+[info]: [2020-04-11T19:24:56.822Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T19:24:56.844Z] GET /boards 200
+[info]: [2020-04-11T19:24:56.855Z] GET /boards 200
+[info]: [2020-04-11T19:24:56.860Z] GET /boards/e6054355-d5f2-4f23-a050-9e49f1dd047f 200
+[info]: [2020-04-11T19:24:56.865Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T19:24:56.870Z] DELETE /boards/6b6b0ce4-9108-40c0-9048-e9b21f72c374 200
+[info]: [2020-04-11T19:24:56.878Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T19:24:56.880Z] PUT /boards/14b18070-b1a6-4cb0-b264-4bdc418efc4f 200 **body: {"id":"14b18070-b1a6-4cb0-b264-4bdc418efc4f","title":"Autotest updated board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T19:24:56.883Z] GET /boards/14b18070-b1a6-4cb0-b264-4bdc418efc4f 200
+[info]: [2020-04-11T19:24:56.886Z] DELETE /boards/14b18070-b1a6-4cb0-b264-4bdc418efc4f 200
+[info]: [2020-04-11T19:24:56.891Z] GET /boards 200
+[info]: [2020-04-11T19:24:56.893Z] DELETE /boards/e6054355-d5f2-4f23-a050-9e49f1dd047f 200
+[info]: [2020-04-11T19:24:56.895Z] GET /boards/e6054355-d5f2-4f23-a050-9e49f1dd047f 200
+[info]: [2020-04-11T19:24:56.898Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T19:24:56.903Z] POST /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks 200 **body: {"title":"Task #2","order":2,"description":"Lorem ipsum","boardId":"3002f0a4-7c9e-488d-bca0-87f37ac8cd33","userId":null,"columnId":null}
+[info]: [2020-04-11T19:24:56.904Z] POST /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks 200 **body: {"title":"Task #1","order":1,"description":"Lorem ipsum","boardId":"3002f0a4-7c9e-488d-bca0-87f37ac8cd33","userId":null,"columnId":null}
+[info]: [2020-04-11T19:24:56.905Z] POST /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks 200 **body: {"title":"Task #4","order":4,"description":"Lorem ipsum","boardId":"3002f0a4-7c9e-488d-bca0-87f37ac8cd33","userId":null,"columnId":null}
+[info]: [2020-04-11T19:24:56.907Z] POST /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks 200 **body: {"title":"Task #3","order":3,"description":"Lorem ipsum","boardId":"3002f0a4-7c9e-488d-bca0-87f37ac8cd33","userId":null,"columnId":null}
+[info]: [2020-04-11T19:24:56.908Z] POST /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks 200 **body: {"title":"Task #5","order":5,"description":"Lorem ipsum","boardId":"3002f0a4-7c9e-488d-bca0-87f37ac8cd33","userId":null,"columnId":null}
+[info]: [2020-04-11T19:24:56.912Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/fb6ebe26-0246-47c8-980d-49b8deaa83e0 200
+[info]: [2020-04-11T19:24:56.912Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/8e6cd9bd-29ab-437e-930f-0a7c1bf539ac 200
+[info]: [2020-04-11T19:24:56.913Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/dd66a858-6212-425c-9025-724ed59f0392 200
+[info]: [2020-04-11T19:24:56.914Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/0e33050d-7d76-4a23-8918-98076ec0f0d2 200
+[info]: [2020-04-11T19:24:56.914Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/99229422-d9da-45a5-a199-f8e87351fb8d 200
+[info]: [2020-04-11T19:24:56.917Z] DELETE /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33 200
+[info]: [2020-04-11T19:24:56.922Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/fb6ebe26-0246-47c8-980d-49b8deaa83e0 200
+[info]: [2020-04-11T19:24:56.923Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/8e6cd9bd-29ab-437e-930f-0a7c1bf539ac 200
+[info]: [2020-04-11T19:24:56.923Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/dd66a858-6212-425c-9025-724ed59f0392 200
+[info]: [2020-04-11T19:24:56.924Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/0e33050d-7d76-4a23-8918-98076ec0f0d2 200
+[info]: [2020-04-11T19:24:56.925Z] GET /boards/3002f0a4-7c9e-488d-bca0-87f37ac8cd33/tasks/99229422-d9da-45a5-a199-f8e87351fb8d 200
+[info]: [2020-04-11T20:22:19.318Z] GET /users/2222 200
+[info]: [2020-04-11T20:24:28.190Z] GET /users/2222 200
+[info]: [2020-04-11T20:27:12.863Z] GET /users/2222 200
+[info]: [2020-04-11T20:28:25.315Z] GET /users/2222 200
+[info]: [2020-04-11T20:30:30.421Z] GET /users/2222 200
+[info]: [2020-04-11T20:31:44.291Z] GET /users/2222 200
+[info]: [2020-04-11T20:41:10.458Z] GET /users/2222 200
+[info]: [2020-04-11T20:41:28.607Z] GET /users/2222 200
+[info]: [2020-04-11T20:42:25.226Z] GET /users/2222 200
+[info]: [2020-04-11T20:42:27.037Z] GET /users/2222 200
+[info]: [2020-04-11T20:43:09.726Z] GET /users/2222 200
+[info]: [2020-04-11T20:43:11.284Z] GET /users/2222 200
+[info]: [2020-04-11T20:45:11.320Z] GET /users/2222 200
+[info]: [2020-04-11T20:46:20.335Z] GET /users/2222 200
+[info]: [2020-04-11T20:46:24.377Z] GET /users/2222 200
+[info]: [2020-04-11T20:47:09.859Z] GET /users/23232 200
+[info]: [2020-04-11T20:47:29.490Z] GET /boards/2222 200
+[info]: [2020-04-11T20:49:42.203Z] GET /boards/32322/tasks 200
+[info]: [2020-04-11T20:49:55.012Z] GET /boards/2132/tasks/23232 200
+[info]: [2020-04-11T20:50:09.504Z] GET /users 200
+[info]: [2020-04-11T20:50:15.670Z] POST /users 200 **body: {"name":"strinsssg","login":"strisssssng","passwords":"string"}
+[info]: [2020-04-11T20:50:25.758Z] POST /users 200 **body: {"name":"strinsssg","login":"strisssssng","passwords":"string"}
+[info]: [2020-04-11T20:50:31.050Z] POST /users 200 **body: {"name":"strinsssg","login":"strisssssng","password":"string"}
+[info]: [2020-04-11T20:51:22.533Z] GET /users/23232 200
+[info]: [2020-04-11T20:51:27.153Z] GET /users 200
+[info]: [2020-04-11T20:51:28.667Z] GET /users/2 200
+[info]: [2020-04-11T20:51:35.191Z] GET /users/e6054355-d5d2-4f23-a010-9e49f1dd047f?test=true 200 **queryParams: {"test":"true"}
+[info]: [2020-04-11T20:53:21.115Z] GET /users/e6054355-d5d2-4f23-a010-9e49f1dd047f2/?test=true 200 **queryParams: {"test":"true"}
+[info]: [2020-04-11T20:54:39.144Z] GET /users 200
+[info]: [2020-04-11T20:54:39.172Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T20:54:39.178Z] GET /users 200
+[info]: [2020-04-11T20:54:39.182Z] GET /users/e6054355-d5d2-4f23-a010-9e49f1dd047f 200
+[info]: [2020-04-11T20:54:39.189Z] DELETE /users/e6054355-d5d2-4f23-a010-9e49f1dd047f 200
+[info]: [2020-04-11T20:54:39.193Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T20:54:39.197Z] DELETE /users/e7775acf-ae21-4609-8c8b-509e56b6f5be 200
+[info]: [2020-04-11T20:54:39.200Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T20:54:39.204Z] PUT /users/e4ac5aef-4570-47a7-bbfb-21cf067c8fe6 200 **body: {"name":"Autotest updated TEST_USER","login":"test_user","password":"T35t_P@55w0rd","id":"e4ac5aef-4570-47a7-bbfb-21cf067c8fe6"}
+[info]: [2020-04-11T20:54:39.206Z] GET /users/e4ac5aef-4570-47a7-bbfb-21cf067c8fe6 200
+[info]: [2020-04-11T20:54:39.209Z] DELETE /users/e4ac5aef-4570-47a7-bbfb-21cf067c8fe6 200
+[info]: [2020-04-11T20:54:39.212Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T20:54:39.215Z] DELETE /users/927098bb-db61-4139-99eb-6037a7afeb65 200
+[info]: [2020-04-11T20:54:39.218Z] POST /users 200 **body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}
+[info]: [2020-04-11T20:54:39.220Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T20:54:39.223Z] POST /boards/4eb0a444-47a5-4eaf-83d6-9a929727e877/tasks 200 **body: {"title":"Task #1","order":1,"description":"Lorem ipsum","userId":"9fe9e03f-c7e2-47ff-af71-bb87ea9c9638","boardId":"4eb0a444-47a5-4eaf-83d6-9a929727e877"}
+[info]: [2020-04-11T20:54:39.225Z] POST /boards/4eb0a444-47a5-4eaf-83d6-9a929727e877/tasks 200 **body: {"title":"Task #2","order":2,"description":"Lorem ipsum","userId":"9fe9e03f-c7e2-47ff-af71-bb87ea9c9638","boardId":"4eb0a444-47a5-4eaf-83d6-9a929727e877"}
+[info]: [2020-04-11T20:54:39.227Z] DELETE /users/9fe9e03f-c7e2-47ff-af71-bb87ea9c9638 200
+[info]: [2020-04-11T20:54:39.229Z] GET /boards/4eb0a444-47a5-4eaf-83d6-9a929727e877/tasks/7d6efdd8-1811-43cb-9190-0d853c1b6f05 200
+[info]: [2020-04-11T20:54:39.231Z] GET /boards/4eb0a444-47a5-4eaf-83d6-9a929727e877/tasks/8a180f78-244b-4d72-9af7-bc214788c641 200
+[info]: [2020-04-11T20:54:39.233Z] DELETE /boards/4eb0a444-47a5-4eaf-83d6-9a929727e877/tasks/7d6efdd8-1811-43cb-9190-0d853c1b6f05 200
+[info]: [2020-04-11T20:54:39.234Z] DELETE /boards/4eb0a444-47a5-4eaf-83d6-9a929727e877/tasks/8a180f78-244b-4d72-9af7-bc214788c641 200
+[info]: [2020-04-11T20:54:39.236Z] DELETE /boards/4eb0a444-47a5-4eaf-83d6-9a929727e877 200
+[info]: [2020-04-11T20:54:39.443Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T20:54:39.457Z] GET /boards 200
+[info]: [2020-04-11T20:54:39.468Z] GET /boards 200
+[info]: [2020-04-11T20:54:39.480Z] GET /boards/e6054355-d5f2-4f23-a050-9e49f1dd047f 200
+[info]: [2020-04-11T20:54:39.489Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T20:54:39.494Z] DELETE /boards/e2ec0e09-355e-4821-bee4-03a33c1f8284 200
+[info]: [2020-04-11T20:54:39.498Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T20:54:39.500Z] PUT /boards/edc3868e-eb44-4bc9-a6f5-b572391a3a72 200 **body: {"id":"edc3868e-eb44-4bc9-a6f5-b572391a3a72","title":"Autotest updated board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T20:54:39.504Z] GET /boards/edc3868e-eb44-4bc9-a6f5-b572391a3a72 200
+[info]: [2020-04-11T20:54:39.507Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T20:54:39.508Z] DELETE /boards/edc3868e-eb44-4bc9-a6f5-b572391a3a72 200
+[info]: [2020-04-11T20:54:39.510Z] GET /boards 200
+[info]: [2020-04-11T20:54:39.512Z] DELETE /boards/e6054355-d5f2-4f23-a050-9e49f1dd047f 200
+[info]: [2020-04-11T20:54:39.514Z] GET /boards/e6054355-d5f2-4f23-a050-9e49f1dd047f 200
+[info]: [2020-04-11T20:54:39.517Z] POST /boards 200 **body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}
+[info]: [2020-04-11T20:54:39.518Z] POST /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks 200 **body: {"title":"Autotest task","order":0,"description":"Lorem ipsum","userId":null,"boardId":null,"columnId":null}
+[info]: [2020-04-11T20:54:39.522Z] POST /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks 200 **body: {"title":"Task #1","order":1,"description":"Lorem ipsum","boardId":"33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf","userId":null,"columnId":null}
+[info]: [2020-04-11T20:54:39.523Z] POST /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks 200 **body: {"title":"Task #2","order":2,"description":"Lorem ipsum","boardId":"33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf","userId":null,"columnId":null}
+[info]: [2020-04-11T20:54:39.524Z] POST /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks 200 **body: {"title":"Task #3","order":3,"description":"Lorem ipsum","boardId":"33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf","userId":null,"columnId":null}
+[info]: [2020-04-11T20:54:39.525Z] POST /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks 200 **body: {"title":"Task #4","order":4,"description":"Lorem ipsum","boardId":"33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf","userId":null,"columnId":null}
+[info]: [2020-04-11T20:54:39.526Z] POST /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks 200 **body: {"title":"Task #5","order":5,"description":"Lorem ipsum","boardId":"33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf","userId":null,"columnId":null}
+[info]: [2020-04-11T20:54:39.528Z] GET /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks 200
+[info]: [2020-04-11T20:54:39.533Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/3ecc5260-8de5-4093-bc2e-5d4c735c440e 200
+[info]: [2020-04-11T20:54:39.534Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/63b395b5-19e3-40b6-bfab-6a107a5edf16 200
+[info]: [2020-04-11T20:54:39.535Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/3e765918-2a51-4efb-9bcc-71cdf345e7d8 200
+[info]: [2020-04-11T20:54:39.536Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/2a0b4d00-5942-42b5-a5df-dbb527b30e19 200
+[info]: [2020-04-11T20:54:39.537Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/80a3e6af-8534-44f6-8a5e-c3f57c1cefc1 200
+[info]: [2020-04-11T20:54:39.539Z] GET /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks 200
+[info]: [2020-04-11T20:54:39.542Z] GET /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks/c8e2dfe1-4876-44ca-8657-96f279019ece 200
+[info]: [2020-04-11T20:54:39.543Z] DELETE /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf 200
+[info]: [2020-04-11T20:54:39.547Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/3ecc5260-8de5-4093-bc2e-5d4c735c440e 200
+[info]: [2020-04-11T20:54:39.548Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/63b395b5-19e3-40b6-bfab-6a107a5edf16 200
+[info]: [2020-04-11T20:54:39.548Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/3e765918-2a51-4efb-9bcc-71cdf345e7d8 200
+[info]: [2020-04-11T20:54:39.549Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/2a0b4d00-5942-42b5-a5df-dbb527b30e19 200
+[info]: [2020-04-11T20:54:39.550Z] GET /boards/33b2137c-b60b-4f2b-ad6e-fbc16dee9ddf/tasks/80a3e6af-8534-44f6-8a5e-c3f57c1cefc1 200
+[info]: [2020-04-11T20:54:39.557Z] POST /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks 200 **body: {"title":"Autotest task","order":0,"description":"Lorem ipsum","userId":null,"boardId":null,"columnId":null}
+[info]: [2020-04-11T20:54:39.560Z] DELETE /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks/0607f8bd-6c06-4ace-b512-71fc1472c4c3 200
+[info]: [2020-04-11T20:54:39.565Z] POST /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks 200 **body: {"title":"Autotest task","order":0,"description":"Lorem ipsum","userId":null,"boardId":null,"columnId":null}
+[info]: [2020-04-11T20:54:39.574Z] PUT /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks/d82f4222-3837-4f23-93cc-5fc145f6ffb9 200 **body: {"id":"d82f4222-3837-4f23-93cc-5fc145f6ffb9","title":"Autotest updated task","order":0,"description":"Lorem ipsum","userId":null,"boardId":"5afc6166-40e8-451d-8a74-f95c42ea8d16","columnId":null}
+[info]: [2020-04-11T20:54:39.576Z] GET /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks/d82f4222-3837-4f23-93cc-5fc145f6ffb9 200
+[info]: [2020-04-11T20:54:39.580Z] GET /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks/c8e2dfe1-4876-44ca-8657-96f279019ece 200
+[info]: [2020-04-11T20:54:39.585Z] DELETE /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16/tasks/c8e2dfe1-4876-44ca-8657-96f279019ece 200
+[info]: [2020-04-11T20:54:39.591Z] GET /boards/c8e2dfe1-4876-44ca-8657-96f279019ece/tasks/undefined 200
+[info]: [2020-04-11T20:54:39.594Z] DELETE /boards/5afc6166-40e8-451d-8a74-f95c42ea8d16 200
