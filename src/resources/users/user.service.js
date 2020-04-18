@@ -1,15 +1,14 @@
-const usersRepo = require('./user.memory.repository');
-const User = require('./user.model');
+const usersDb = require('./user.db.repository');
 
-const getAll = () => usersRepo.getAll();
+const getAll = () => usersDb.getAll();
 
-const getOne = id => usersRepo.getOne(id);
+const getOne = id => usersDb.getOne(id);
 
-const create = user => usersRepo.create(new User({ ...user }));
+const create = user => usersDb.create(user);
 
-const update = (payload, id) => usersRepo.update(payload, id);
+const update = (payload, id) => usersDb.update(payload, id);
 
-const remove = id => usersRepo.remove(id);
+const remove = id => usersDb.remove(id);
 
 const isUnique = async payload => {
   const users = await getAll();

@@ -28,3 +28,32 @@
 [error]: [2020-04-11T20:51:22.534Z] [404] Not Found: Not found
 [error]: [2020-04-11T20:51:28.668Z] [404] Not Found: Not found
 [error]: [2020-04-11T20:53:21.120Z] [404] Not Found
+[error]: [2020-04-13T20:07:55.233Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:07:55.268Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:07:55.279Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:07:55.290Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:07:55.296Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:07:55.302Z] [404] Not Found
+[error]: [2020-04-13T20:07:55.312Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:07:55.332Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:09:31.557Z] [500] Internal Server Error: users is not defined
+[error]: [2020-04-13T20:09:32.215Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:09:32.221Z] [500] Internal Server Error: users is not defined
+[error]: [2020-04-13T20:09:32.285Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:09:32.353Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:09:32.357Z] [500] Internal Server Error: users is not defined
+[error]: [2020-04-13T20:09:32.421Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:09:32.425Z] [500] Internal Server Error: users is not defined
+[error]: [2020-04-13T20:09:32.493Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:17:30.196Z] [500] Internal Server Error: User.getAll is not a function
+[error]: [2020-04-13T20:17:55.664Z] [500] Internal Server Error: user is not defined
+[error]: [2020-04-13T20:19:18.699Z] [500] Internal Server Error: User.getAll is not a function
+[error]: [2020-04-13T20:19:56.287Z] [404] Not Found
+[error]: [2020-04-18T14:43:55.238Z] [500] Uncaught Exception: Oops!
+[error]: [2020-04-18T14:47:58.108Z] [500] Uncaught Exception: Oops!
+[error]: [2020-04-18T14:48:01.490Z] [500] Uncaught Exception: Oops!
+[error]: [2020-04-18T14:51:51.881Z] [500] Uncaught Exception: Oops!
+[error]: [2020-04-18T14:59:12.525Z] [500] Uncaught Exception: Oops!
+[error]: [2020-04-18T14:59:42.341Z] [500] Unhandled Rejection
+[error]: [2020-04-18T15:02:46.254Z] [500] Uncaught Exception: Oops!
+[error]: [2020-04-18T15:03:49.774Z] [500] Uncaught Exception: Oops!

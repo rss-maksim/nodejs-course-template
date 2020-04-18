@@ -17,6 +17,7 @@ const handleInternalServerError = (err, req, res, next) => {
     error: 'Internal Server Error',
     description: text
   });
+  next(err);
 };
 
 module.exports = handleInternalServerError;
