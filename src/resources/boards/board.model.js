@@ -1,15 +1,24 @@
+const mongoose = require('mongoose');
 const uuid = require('uuid');
+const { pick } = require('ramda');
 
-class Board {
-  constructor({ id = uuid(), title = 'boardTitle', columns = [] } = {}) {
-    this.id = id;
-    this.title = title;
-    this.columns = columns;
-  }
+const boardSchema = new mongoose.Schema(
+  {
+    _id: {
+      type: String,
+      default: uuid
+    },
+    title: String,
+    columns: Array
+  },
+  { timestamps: true }
+);
 
-  static toResponse(board) {
-    return board;
-  }
-}
+boardSchema.statics.toResponse = board => {
+  const { _id: id } = board;
+  return { id, ...pick(['title', 'columns'], board) };
+};
+
+const Board = mongoose.model('Board', boardSchema);
 
 module.exports = Board;

@@ -1,27 +1,34 @@
+const mongoose = require('mongoose');
 const uuid = require('uuid');
+const { pick } = require('ramda');
 
-class Task {
-  constructor({
-    id = uuid(),
-    title = 'taskTitle',
-    order,
-    description,
-    userId,
-    boardId,
-    columnId
-  } = {}) {
-    this.id = id;
-    this.title = title;
-    this.order = order;
-    this.description = description;
-    this.userId = userId;
-    this.boardId = boardId;
-    this.columnId = columnId;
-  }
+const taskSchema = new mongoose.Schema(
+  {
+    _id: {
+      type: String,
+      default: uuid
+    },
+    title: String,
+    order: Number,
+    description: String,
+    userId: String,
+    boardId: String,
+    columnId: String
+  },
+  { timestamps: true }
+);
 
-  static toResponse(task) {
-    return task;
-  }
-}
+taskSchema.statics.toResponse = task => {
+  const { _id: id } = task;
+  return {
+    id,
+    ...pick(
+      ['title', 'order', 'description', 'userId', 'boardId', 'columnId'],
+      task
+    )
+  };
+};
+
+const Task = mongoose.model('Task', taskSchema);
 
 module.exports = Task;

@@ -33,6 +33,7 @@ router
     try {
       const { boardId } = req.params;
       const board = await boardsService.getOne(boardId);
+      console.log('board', board);
       if (!board) {
         return res.status(404).json({ status: 'error', message: 'Not found' });
       }

@@ -1,14 +1,13 @@
-const boardsRepo = require('./board.memory.repository');
-const Board = require('./board.model');
+const boardsDb = require('./board.db.repository');
 
-const getAll = () => boardsRepo.getAll();
+const getAll = () => boardsDb.getAll();
 
-const getOne = id => boardsRepo.getOne(id);
+const getOne = id => boardsDb.getOne(id);
 
-const create = board => boardsRepo.create(new Board({ ...board }));
+const create = board => boardsDb.create(board);
 
-const update = (payload, id) => boardsRepo.update(payload, id);
+const update = (payload, id) => boardsDb.update(payload, id);
 
-const remove = id => boardsRepo.remove(id);
+const remove = id => boardsDb.remove(id);
 
 module.exports = { getAll, getOne, create, update, remove };
