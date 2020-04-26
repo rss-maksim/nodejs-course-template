@@ -3,10 +3,11 @@ const swaggerUI = require('swagger-ui-express');
 const path = require('path');
 const YAML = require('yamljs');
 
-const loggerMiddleware = require('./common/middlewares/log');
+const { authGuard } = require('./resources/auth/auth.middleware');
 const userRouter = require('./resources/users/user.router');
 const boardRouter = require('./resources/boards/board.router');
 const taskRouter = require('./resources/tasks/task.router');
+const authRouter = require('./resources/auth/auth.router');
 const {
   handleError,
   handleInternalServerError
@@ -19,7 +20,7 @@ app.use(express.json());
 
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
-app.use(loggerMiddleware);
+app.use(authGuard);
 
 app.use('/', (req, res, next) => {
   if (req.originalUrl === '/') {
@@ -32,6 +33,7 @@ app.use('/', (req, res, next) => {
 app.use('/users', userRouter);
 app.use('/boards', boardRouter);
 app.use('/boards', taskRouter);
+app.use('/login', authRouter);
 
 app.use(handleError);
 app.use(handleInternalServerError);

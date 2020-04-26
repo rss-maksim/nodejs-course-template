@@ -9,6 +9,11 @@ const getOne = async id => {
   return user;
 };
 
+const getOneByLogin = async login => {
+  const user = await User.findOne({ login }).exec();
+  return user;
+};
+
 const create = async user => User.create(user);
 
 const update = async (user, id) => {
@@ -19,4 +24,4 @@ const remove = async id => {
   return (await User.deleteOne({ _id: id })).deletedCount;
 };
 
-module.exports = { getAll, getOne, create, update, remove };
+module.exports = { getAll, getOne, create, update, remove, getOneByLogin };
