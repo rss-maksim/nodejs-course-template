@@ -31,5 +31,6 @@ module.exports = {
   create,
   update,
   remove,
-  isUnique
+  isUnique,
+  saltRounds
 };
